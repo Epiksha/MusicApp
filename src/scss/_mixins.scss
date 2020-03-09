@@ -1,9 +1,0 @@
-@mixin addFont ($name, $file, $weight, $style, $extension) {
-    @font-face {
-        font-family: "#{$name}";
-        font-weight: $weight;
-        font-style: $style;
-
-        src: url("../assets/fonts/#{$file}.#{$extension}");
-    }
-}
