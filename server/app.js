@@ -1,12 +1,12 @@
-const cors = require('cors');
-const express = require('express');
-const path = require('path');
-const dotenv = require('dotenv');
 const history = require('connect-history-api-fallback');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const express = require('express');
 const morgan = require('morgan');
+const path = require('path');
 
-const router = require('./router');
 const config = require('./config/main');
+const router = require('./router');
 
 const app = express();
 const staticFileMiddleware = express.static(path.join(__dirname, 'public'));
@@ -17,6 +17,7 @@ app.use(cors(config.cors));
 app.options('*', cors(config.cors));
 app.use(history(config.history));
 app.use(morgan('combined'));
+app.use(express.json());
 app.use(staticFileMiddleware);
 
 // Router

@@ -1,0 +1,26 @@
+.register__form {
+    width: 40%;
+    margin: auto;
+
+    input {
+        display: block;
+
+        box-sizing: border-box;
+        width: 100%;
+        margin: $spacing auto;
+        padding: $spacing * 0.5 $spacing;
+        border-radius: 1rem;
+        border: solid 1px transparentize($color1, 0.8);
+
+        text-indent: 0.5rem;
+    }
+
+    button {
+        width: 50%;
+        padding: $spacing * 0.5 $spacing;
+        border-radius: 1rem;
+
+        background-color: $color2;
+        color: $color0;
+    }
+}

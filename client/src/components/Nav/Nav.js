@@ -10,8 +10,8 @@ export default {
                     exact: true,
                 },
                 {
-                    url: '/contact',
-                    text: 'Contact',
+                    url: '/register',
+                    text: 'Register',
                 },
             ],
         };
