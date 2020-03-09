@@ -1,4 +1,6 @@
 const express = require('express');
+const authController = require('./controllers/authController');
+const authPolicy = require('./policies/AuthPolicy');
 
 const router = express.Router();
 
@@ -7,10 +9,6 @@ router.get('/index.html', (req, res, next) => {
     next();
 });
 
-router.post('/register', (req, res) => {
-    res.send({
-        message: `Your email, ${req.body.email}, is now registered.`,
-    });
-});
+router.post('/register', authPolicy.register, authController.register);
 
 module.exports = router;

@@ -5,8 +5,9 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 
-const config = require('./config/main');
+const config = require('./config/config');
 const router = require('./router');
+const { sequelize } = require('./models');
 
 const app = express();
 const staticFileMiddleware = express.static(path.join(__dirname, 'public'));
@@ -23,5 +24,8 @@ app.use(staticFileMiddleware);
 // Router
 app.use('/', router);
 
-// eslint-disable-next-line no-console
-app.listen(process.env.PORT, console.log(`Express app listening on port ${process.env.PORT}.`));
+// Database & Boot
+sequelize.sync()
+    .then(() => {
+        app.listen(process.env.PORT);
+    });
