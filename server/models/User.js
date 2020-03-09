@@ -1,18 +1,16 @@
-const bcrypt = require('bcrypt-nodejs');
+const bcrypt = require('bcrypt');
 
-function hashPassword(user) {
+async function hashPassword(user) {
     const SALT_FACTOR = 8;
   
     if (!user.changed('password')) {
       return null;
     }
-  
-    return bcrypt
-        .genSaltAsync(SALT_FACTOR)
-        .then((salt) => bcrypt.hashAsync(user.password, salt, null))
-        .then((hash) => {
-            user.setDataValue('password', hash);
-        });
+
+    const hash = await bcrypt.hash(user.password, SALT_FACTOR);
+    user.setDataValue('password', hash);
+
+    return null;
 }
 
 module.exports = (sequelize, DataTypes) => {

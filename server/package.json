@@ -11,7 +11,7 @@
 		"node": ">=10.16.0"
 	},
 	"scripts": {
-		"start": " NODE_ENV=production node app.js",
+		"start": "NODE_ENV=production node app.js",
 		"setup": "npm ci",
 		"dev": "cross-env NODE_ENV=development nodemon app.js --exec \"npm run lint && node\"",
 		"lint": "eslint ./"
@@ -28,7 +28,7 @@
 	},
 	"dependencies": {
 		"axios": "^0.19.2",
-		"bcrypt-nodejs": "0.0.3",
+		"bcrypt": "^4.0.1",
 		"connect-history-api-fallback": "^1.6.0",
 		"cors": "^2.8.5",
 		"dotenv": "^8.2.0",

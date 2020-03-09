@@ -11,12 +11,17 @@ function jwtSignUser(user) {
 module.exports = {
     async register(req, res) {
         try {
-            const user = await User.create(req.body);
+            console.log('BEFORE');
+
+        const user = await User.create(req.body);
             res.send(user.toJSON());
+            console.log('AFTER');
         } catch (err) {
+            console.log('BEFORE 2');
             res.status(400).send({
                 error: 'This email is already in use.',
             });
+            console.log('AFTER2');
         }
     },
 
