@@ -10,6 +10,10 @@ export default {
                     exact: true,
                 },
                 {
+                    url: '/login',
+                    text: 'Sign In',
+                },
+                {
                     url: '/register',
                     text: 'Register',
                 },

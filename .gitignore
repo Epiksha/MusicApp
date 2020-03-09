@@ -6,4 +6,4 @@ node_modules
 _Output/
 dist/
 .env
-musicapp.sqlite
+*.sqlite
