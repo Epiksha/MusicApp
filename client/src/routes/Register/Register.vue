@@ -12,6 +12,7 @@
                 placeholder="Email"
                 autocomplete="on"
             >
+
             <input
                 v-model="password"
                 type="password"
@@ -20,8 +21,13 @@
                 autocomplete="on"
             >
 
+            <div
+                class="error ut-marginBottom"
+                v-html="error"
+            />
+
             <button
-                @click="register"
+                @click.prevent="register"
             >
                 Register
             </button>

@@ -7,14 +7,20 @@ export default {
         return {
             email: '',
             password: '',
+            error: null,
         };
     },
 
     methods: {
         async register() {
-            const response = await Auth.register({ email: this.email, password: this.password });
-
-            console.log(response.data);
+            try {
+                await Auth.register({
+                    email: this.email,
+                    password: this.password,
+                });
+            } catch (error) {
+                this.error = error.response.data.error;
+            }
         },
     },
 };

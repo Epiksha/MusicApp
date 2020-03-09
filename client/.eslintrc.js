@@ -19,6 +19,7 @@ module.exports = {
 		"linebreak-style": [0],
 		"no-trailing-spaces": 0,
 		"indent": "off",
-		"vue/html-indent": "off"
+		"vue/html-indent": "off",
+		"vue/no-v-html": 0
 	}
 }
