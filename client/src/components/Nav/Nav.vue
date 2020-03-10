@@ -17,14 +17,6 @@
         >
             Sign In
         </router-link>
-
-        <router-link
-            v-if="!$store.state.isUserLoggedIn"
-            to="/register"
-            class="nav__link"
-        >
-            Register
-        </router-link>
         
         <button
             v-if="$store.state.isUserLoggedIn"

@@ -1,4 +1,4 @@
-@mixin addFont ($name, $file, $weight, $style, $extension) {
+@mixin addFont($name, $file, $weight, $style, $extension) {
     @font-face {
         font-family: "#{$name}";
         font-weight: $weight;

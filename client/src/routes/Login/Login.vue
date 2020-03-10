@@ -1,37 +1,51 @@
 <template>
-    <main class="login">
-        <h1>Login</h1>
+    <main>
+        <Callout title="Login">
+            <form class="form">
+                <input
+                    v-model="email"
+                    type="email"
+                    name="email"
+                    class="form__input"
+                    placeholder="Email"
+                    autocomplete="on"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Email'"
+                >
 
-        <form
-            class="login__form"
-        >
-            <input
-                v-model="email"
-                type="email"
-                name="email"
-                placeholder="Email"
-                autocomplete="on"
-            >
+                <input
+                    v-model="password"
+                    type="password"
+                    name="password"
+                    class="form__input"
+                    placeholder="Password"
+                    autocomplete="on"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Password'"
+                >
 
-            <input
-                v-model="password"
-                type="password"
-                name="password"
-                placeholder="Password"
-                autocomplete="on"
-            >
+                <div
+                    class="error"
+                    v-html="error"
+                />
 
-            <div
-                class="error ut-marginBottom"
-                v-html="error"
-            />
+                <button
+                    class="button"
+                    @click.prevent="login"
+                >
+                    Login
+                </button>
 
-            <button
-                @click.prevent="login"
-            >
-                Login
-            </button>
-        </form>
+                <div class="form__link">
+                    <span>
+                        Don't have an account?
+                    </span>
+                    <router-link to="/register">
+                        Register
+                    </router-link>
+                </div>
+            </form>
+        </Callout>
     </main>
 </template>
 

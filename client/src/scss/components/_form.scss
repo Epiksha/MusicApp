@@ -1,0 +1,30 @@
+.form {
+    &__input {
+        display: block;
+        
+        margin: $spacing * 2 auto;
+        padding: $spacing * 0.5 $spacing;
+        border: none;
+        border-bottom: solid 1px $color4;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__link {
+        margin-top: $spacing * 1.5;
+
+        & > span, & > a {
+            font-size: 0.75rem;
+        }
+
+        & > a {
+            color: $color2;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

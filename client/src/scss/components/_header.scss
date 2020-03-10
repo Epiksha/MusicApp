@@ -1,55 +1,45 @@
 .header {
-    display: table;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    position: relative;
-    z-index: 2;
-
+    box-sizing: border-box;
     height: 4rem;
     width: 100%;
+    padding: 0 $spacing * 2;
 
-    background-color: $color0;
-    box-sizing: border-box;
+    background-color: $color2;
+    color: $color0;
     box-shadow: 0 1px 2px 2px transparentize($color1, 0.9);
-    
-    text-align: center;
-
-    &__menu {
-        position: absolute;
-        top: 50%;
-        left: $spacing * 2;
-        transform: translateY(-50%);
-
-        height: 36px;
-
-        fill: $color3;
-
-        cursor: pointer;
-
-        &:hover > svg {
-            fill: $color2;
-        }
-        &.active > svg {
-            fill: $color2;
-        }
-    }
 
     &__title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        flex: 2;
+        text-align: left;
 
-        & > h1 {
-            color: $color3;
+        font-size: 1rem;
+        font-weight: bold;
+    }
 
-            &:hover {
-                color: $color2;
-            }
+    &__link {
+        margin-left: $spacing;
+
+        color: $color0;
+
+        font-size: 0.8rem;
+        font-weight: bold;
+
+        @include breakpoint($tablet) {
+            margin: 0 $spacing;
         }
     }
 
-    &__text {
-        display: table-cell;
-        vertical-align: middle;
+    nav {
+        flex: 2;
+        text-align: right;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+        }
     }
 }

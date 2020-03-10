@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <h2 class="footer__text">
-            Footer
+            The Note Corner
         </h2>
     </footer>
 </template>

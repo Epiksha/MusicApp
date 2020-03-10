@@ -1,7 +1,6 @@
 <template>
     <main class="home">
-        <div class="home__hero" />
-        <Example />
+        <h1>Home</h1>
     </main>
 </template>
 

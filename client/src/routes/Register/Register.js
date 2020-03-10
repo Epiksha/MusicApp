@@ -1,4 +1,5 @@
 import Auth from '../../services/AuthService';
+import Callout from '../../components/Callout/Callout.vue';
 
 export default {
     name: 'Register',
@@ -27,5 +28,9 @@ export default {
                 this.error = error.response.data.error;
             }
         },
+    },
+
+    components: {
+        Callout,
     },
 };

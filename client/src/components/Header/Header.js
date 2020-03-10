@@ -1,16 +1,24 @@
-import Nav from '../Nav/Nav.vue';
-
-import MenuIcon from '../../assets/icons/menu.svg';
-
 export default {
     name: 'Header',
 
-    props: [
-        'navOpen',
-    ],
+    data() {
+        return {
+            links: [
+                {
+                    url: '/songs',
+                    text: 'Browse',
+                    exact: true,
+                },
+            ],
+        };
+    },
 
-    components: {
-        Nav,
-        MenuIcon,
+    methods: {
+        logout() {
+            this.$store.dispatch('setToken', null);
+            this.$store.dispatch('setUser', null);
+
+            this.$router.push('/');
+        },
     },
 };

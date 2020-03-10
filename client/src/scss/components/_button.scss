@@ -1,0 +1,29 @@
+.button {
+    display: block;
+
+    box-sizing: border-box;
+    margin: auto;
+    padding: $spacing * 0.5 $spacing * 5;
+    border-radius: 1rem;
+
+    background-color: $color2;
+    color: $color0;
+
+    font-weight: bold;
+}
+
+.button--menu {
+    height: 36px;
+
+    fill: $color3;
+
+    cursor: pointer;
+
+    &:hover > svg {
+        fill: $color2;
+    }
+
+    &.active > svg {
+        fill: $color2;
+    }
+}

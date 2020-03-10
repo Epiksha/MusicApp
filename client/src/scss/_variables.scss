@@ -3,13 +3,13 @@ $color0: #fff;
 $color1: #000;
 $color2: #42b883;
 $color3: #35495e;
+$color4: #d1d1d1;
 
 // Breakpoints
-$bp-xs: 0px;
-$bp-sm: 600px;
-$bp-md: 960px;
-$bp-lg: 1280px;
-$bp-xl: 1920px;
+$mobile: 380px;
+$tablet: 768px;
+$desktop: 960px;
+$desktopLg: 1280px;
 
 // Misc
 $spacing: 1rem;

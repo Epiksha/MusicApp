@@ -1,22 +1,47 @@
 <template>
     <header class="header">
-        <button
-            type="button"
-            class="header__menu"
-            :class="{'active': navOpen}"
-            @click="$emit('navToggle')"
-        >
-            <MenuIcon />
-        </button>
-
         <router-link
             to="/"
             class="header__title"
         >
-            <h1>MusicApp</h1>
+            The Note Corner
         </router-link>
-        
-        <Nav />
+
+        <nav>
+            <ul>
+                <li
+                    v-for="link in links"
+                    :key="link.text"
+                >
+                    <router-link
+                        :to="link.url"
+                        :exact="link.exact"
+                        class="header__link"
+                    >
+                        {{ link.text }}
+                    </router-link>
+                </li>
+
+                <li v-if="!$store.state.isUserLoggedIn">
+                    <router-link
+                       
+                        to="/login"
+                        class="header__link"
+                    >
+                        Login
+                    </router-link>
+                </li>
+
+                <li v-if="$store.state.isUserLoggedIn">
+                    <button
+                        class="header__link"
+                        @click="logout"
+                    >
+                        Logout
+                    </button>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
 

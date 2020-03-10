@@ -1,0 +1,20 @@
+.callout {
+    box-sizing: border-box;
+    overflow: hidden;
+    max-width: 60vw;
+    margin: auto;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 1px 2px 2px transparentize($color1, 0.9);
+
+    &__header {
+        padding: $spacing * 0.5 $spacing;
+
+        background-color: $color2;
+        color: $color0;
+    }
+
+    .callout__body {
+        padding: $spacing * 2 $spacing;
+    }
+}

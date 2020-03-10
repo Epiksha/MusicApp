@@ -1,4 +1,5 @@
 import Auth from '../../services/AuthService';
+import Callout from '../../components/Callout/Callout.vue';
 
 export default {
     name: 'Login',
@@ -23,9 +24,15 @@ export default {
 
                 this.$store.dispatch('setToken', token);
                 this.$store.dispatch('setUser', user);
+
+                this.$router.push('/');
             } catch (error) {
                 this.error = error.response.data.error;
             }
         },
+    },
+
+    components: {
+        Callout,
     },
 };
