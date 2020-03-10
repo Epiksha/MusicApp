@@ -14,10 +14,15 @@ export default {
     methods: {
         async register() {
             try {
-                await Auth.register({
+                const response = await Auth.register({
                     email: this.email,
                     password: this.password,
                 });
+
+                const { token, user } = response.data;
+                
+                this.$store.dispatch('setToken', token);
+                this.$store.dispatch('setUser', user);
             } catch (error) {
                 this.error = error.response.data.error;
             }

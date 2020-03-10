@@ -6,4 +6,4 @@ node_modules
 _Output/
 dist/
 .env
-*.sqlite
+server/*.sqlite

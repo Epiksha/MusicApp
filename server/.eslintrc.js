@@ -17,6 +17,7 @@ module.exports = {
 		"max-len": 0,
 		"linebreak-style": [0],
 		"no-trailing-spaces": 0,
-		"indent": "off"
+		"indent": "off",
+		"no-param-reassign": 0
 	}
 }

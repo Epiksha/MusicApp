@@ -20,6 +20,7 @@ module.exports = {
 		"no-trailing-spaces": 0,
 		"indent": "off",
 		"vue/html-indent": "off",
-		"vue/no-v-html": 0
+		"vue/no-v-html": 0,
+		"no-param-reassign": 0
 	}
 }
