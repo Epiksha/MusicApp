@@ -5,6 +5,7 @@ import Home from './routes/Home/Home.vue';
 import Register from './routes/Register/Register.vue';
 import Login from './routes/Login/Login.vue';
 import Songs from './routes/Songs/Songs.vue';
+import CreateSong from './routes/CreateSong/CreateSong.vue';
 
 Vue.use(Router);
 
@@ -13,22 +14,22 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'home',
             component: Home,
         },
         {
             path: '/songs',
-            name: 'songs',
             component: Songs,
         },
         {
+            path: '/create',
+            component: CreateSong,
+        },
+        {
             path: '/login',
-            name: 'login',
             component: Login,
         },
         {
             path: '/register',
-            name: 'register',
             component: Register,
         },
     ],

@@ -4,7 +4,7 @@
             <ul>
                 <li
                     v-for="song in songs"
-                    :key="song.title"
+                    :key="song.id"
                     v-text="song.title"
                 />
             </ul>

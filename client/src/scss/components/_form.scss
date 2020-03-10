@@ -1,4 +1,39 @@
 .form {
+    &--create {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__group {
+        margin: 0;
+
+        &--1 {
+            flex: 1;
+            margin-right: $spacing;
+        }
+
+        &--2 {
+            margin-left: $spacing;
+            flex: 2;
+        }
+
+        &--last {
+            flex: 0 1 100%;
+            
+            margin-top: $spacing * 2;
+
+            .button--form {
+                width: 50%;
+            }
+        }
+
+        .form__input {
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+
     &__input {
         display: block;
         
