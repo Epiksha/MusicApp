@@ -1,4 +1,3 @@
-const history = require('connect-history-api-fallback');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const express = require('express');
@@ -16,7 +15,6 @@ dotenv.config();
 // Middleware
 app.use(cors(config.cors));
 app.options('*', cors(config.cors));
-app.use(history(config.history));
 app.use(morgan('combined'));
 app.use(express.json());
 app.use(staticFileMiddleware);
