@@ -10,7 +10,6 @@
                 type="email"
                 name="email"
                 placeholder="Email"
-                autocomplete="on"
             >
 
             <input
@@ -18,7 +17,7 @@
                 type="password"
                 name="password"
                 placeholder="Password"
-                autocomplete="on"
+                autocomplete="new-password"
             >
 
             <div

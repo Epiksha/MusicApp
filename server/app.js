@@ -25,7 +25,7 @@ app.use(staticFileMiddleware);
 app.use('/', router);
 
 // Database & Boot
-sequelize.sync({ force: true })
-    .then(() => {
-        app.listen(process.env.PORT);
-    });
+(async () => {
+    await sequelize.sync();
+    app.listen(process.env.PORT);
+})();
