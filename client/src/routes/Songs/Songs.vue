@@ -1,6 +1,9 @@
 <template>
     <main class="songs">
-        <Callout title="Song Info">
+        <Callout
+            title="Song Info"
+            :button="button"
+        >
             <ul>
                 <li
                     v-for="song in songs"

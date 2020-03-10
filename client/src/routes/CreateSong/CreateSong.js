@@ -22,11 +22,34 @@ export default {
     methods: {
         async create() {
             try {
-                await SongService.createSong(this.song);
-                this.$router.push('songs');
+                if (this.required) {
+                    await SongService.createSong(this.song);
+                    this.$router.push('songs');
+                }
             } catch (err) {
                 console.log(err);
             }
+        },
+    },
+
+    computed: {
+        required() {
+            const {
+                title,
+                artist,
+                genre,
+                album,
+                albumImageUrl,
+                youtubeId,
+                lyrics,
+                tab,
+            } = this;
+
+            if (title && artist && genre && album && albumImageUrl && youtubeId && lyrics && tab) {
+                return true;
+            }
+
+            return false;
         },
     },
 

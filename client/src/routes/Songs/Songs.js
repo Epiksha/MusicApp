@@ -7,6 +7,10 @@ export default {
     data() {
         return {
             songs: null,
+            button: {
+                label: '+',
+                link: '/create',
+            },
         };
     },
 

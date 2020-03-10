@@ -3,5 +3,6 @@ export default {
 
     props: [
         'title',
+        'button',
     ],
 };

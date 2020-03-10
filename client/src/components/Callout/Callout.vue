@@ -3,8 +3,19 @@
         <header
             v-if="title"
             class="callout__header"
+            :class="{'ut-relative': button}"
         >
             <h2 v-text="title" />
+
+            <router-link
+                v-if="button"
+                :to="button.link"
+                class="
+                    button
+                    button--callout
+                "
+                v-text="button.label"
+            />
         </header>
 
         <div class="callout__body">

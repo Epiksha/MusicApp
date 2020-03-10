@@ -17,6 +17,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Title'"
+                    required
                 >
 
                 <input
@@ -28,6 +29,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Artist'"
+                    required
                 >
 
                 <input
@@ -39,6 +41,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Genre'"
+                    required
                 >
 
                 <input
@@ -50,6 +53,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Album'"
+                    required
                 >
 
                 <input
@@ -61,6 +65,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Album Image Url'"
+                    required
                 >
 
                 <input
@@ -72,6 +77,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Youtube Id'"
+                    required
                 >
             </Callout>
 
@@ -88,6 +94,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Lyrics'"
+                    required
                 >
 
                 <input
@@ -99,6 +106,7 @@
                     autocomplete="on"
                     onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Tab'"
+                    required
                 >
             </Callout>
 
@@ -108,7 +116,7 @@
                         button
                         button--form
                     "
-                    @click="create"
+                    @click.prevent="create"
                 >
                     Create Song
                 </button>
