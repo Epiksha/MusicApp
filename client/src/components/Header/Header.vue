@@ -13,7 +13,7 @@
             to="/"
             class="header__title"
         >
-            <h1>Header</h1>
+            <h1>MusicApp</h1>
         </router-link>
         
         <Nav />

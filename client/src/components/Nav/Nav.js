@@ -5,19 +5,20 @@ export default {
         return {
             links: [
                 {
-                    url: '/',
-                    text: 'Home',
+                    url: '/songs',
+                    text: 'Browse',
                     exact: true,
-                },
-                {
-                    url: '/login',
-                    text: 'Sign In',
-                },
-                {
-                    url: '/register',
-                    text: 'Register',
                 },
             ],
         };
+    },
+
+    methods: {
+        logout() {
+            this.$store.dispatch('setToken', null);
+            this.$store.dispatch('setUser', null);
+
+            this.$router.push('/');
+        },
     },
 };

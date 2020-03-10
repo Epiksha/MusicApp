@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from './routes/Home/Home.vue';
 import Register from './routes/Register/Register.vue';
 import Login from './routes/Login/Login.vue';
+import Songs from './routes/Songs/Songs.vue';
 
 Vue.use(Router);
 
@@ -14,6 +15,11 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home,
+        },
+        {
+            path: '/',
+            name: 'songs',
+            component: Songs,
         },
         {
             path: '/login',
