@@ -5,10 +5,10 @@
             :button="button"
         >
             <ul>
-                <li
+                <Song
                     v-for="song in songs"
                     :key="song.id"
-                    v-text="song.title"
+                    :info="song"
                 />
             </ul>
         </Callout>

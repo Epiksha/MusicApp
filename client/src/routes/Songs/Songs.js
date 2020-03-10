@@ -1,5 +1,7 @@
-import Callout from '../../components/Callout/Callout.vue';
 import SongService from '../../services/SongService';
+
+import Callout from '../../components/Callout/Callout.vue';
+import Song from '../../components/Song/Song.vue';
 
 export default {
     name: 'Songs',
@@ -21,5 +23,6 @@ export default {
 
     components: {
         Callout,
+        Song,
     },
 };
