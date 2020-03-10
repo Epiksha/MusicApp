@@ -7,9 +7,9 @@ module.exports = {
                 limit: 10,
             });
 
-            res.send(song.toJSON());
+            res.send(song);
         } catch (err) {
-            res.status(400).send({
+            res.status(500).send({
                 error: 'Error occured trying to fetch the songs',
             });
         }

@@ -24,6 +24,6 @@ app.use('/', router);
 
 // Database & Boot
 (async () => {
-    await sequelize.sync();
+    await sequelize.sync({ force: true });
     app.listen(process.env.PORT);
 })();
