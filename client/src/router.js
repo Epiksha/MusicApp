@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Home from './routes/Home/Home.vue';
 import Register from './routes/Register/Register.vue';
 import Login from './routes/Login/Login.vue';
 import Songs from './routes/Songs/Songs.vue';
@@ -15,7 +14,7 @@ export default new Router({
     routes: [
         {
             path: '/',
-            component: Home,
+            redirect: '/songs',
         },
         {
             path: '/songs',

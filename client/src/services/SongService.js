@@ -12,4 +12,8 @@ export default {
     createSong(songData) {
         return Api().post('songs', songData);
     },
+
+    updateSong(songData) {
+        return Api().put(`songs/${songData.id}`, songData);
+    },
 };

@@ -38,4 +38,18 @@ module.exports = {
             });
         }
     },
+    
+    async updateSong(req, res) {
+        try {
+            const song = await Song.findByPk(req.body.id);
+
+            song.update(req.body);
+
+            res.send(song);
+        } catch (err) {
+            res.status(400).send({
+                error: 'Error occured trying to update the song',
+            });
+        }
+    },
 };

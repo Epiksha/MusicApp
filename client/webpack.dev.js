@@ -9,12 +9,13 @@ module.exports = merge(common, {
 
     output: {
         filename: '[name].bundle.js',
-        path: join(__dirname, 'dist')
+        path: join(__dirname, 'dist'),
+        publicPath: '/'
     },
 
     devServer: {
         port: 3000,
-        historyApiFallback: true,
+        historyApiFallback: true
     },
 
     plugins: [

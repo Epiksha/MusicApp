@@ -2,20 +2,19 @@
     display: block;
 
     box-sizing: border-box;
-    width: 50%;
+    width: 75%;
     margin: $spacing * 2 auto 0 auto;
     padding: $spacing * 0.5 0;
     border-radius: 1rem;
 
-    text-align: center;
-
     background-color: $color2;
     color: $color0;
 
+    font-size: 1rem;
     font-weight: bold;
 
     @include breakpoint($tablet) {
-
+        width: 50%;
     }
 }
 
@@ -35,6 +34,13 @@
         background: $color0;
         color: $color2;
     }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .button--form {
@@ -42,4 +48,8 @@
         margin-top: $spacing * 3;
         padding: $spacing * 0.75;
     }
+}
+
+.button--edit {
+    max-width: 200px;
 }

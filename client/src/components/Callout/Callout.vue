@@ -14,8 +14,9 @@
                     button
                     button--callout
                 "
-                v-text="button.label"
-            />
+            >
+                <span v-text="button.label" />
+            </router-link>
         </header>
 
         <div class="callout__body">
