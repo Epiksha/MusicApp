@@ -1,10 +1,10 @@
 <template>
     <li class="song">
         <div class="song__group">
-            <h3 v-text="`Song: ${info.title}`" />
-            <h4 v-text="`Artist: ${info.artist}`" />
-            <h5 v-text="`Album: ${info.album}`" />
-            <h6 v-text="`Genre: ${info.genre}`" />
+            <span v-html="`<span class='song__group__label'>Song:</span> ${info.title}`" />
+            <span v-html="`<span class='song__group__label'>Artist:</span> ${info.artist}`" />
+            <span v-html="`<span class='song__group__label'>Album:</span> ${info.album}`" />
+            <span v-html="`<span class='song__group__label'>Genre:</span> ${info.genre}`" />
         </div>
 
         <div class="song__group">
@@ -13,6 +13,14 @@
                 alt="Album Cover"
             >
         </div>
+
+        <router-link
+            :to="{ path: `songs/${info.id}` }"
+            type="button"
+            class="button"
+        >
+            View Song Info
+        </router-link>
     </li>
 </template>
 

@@ -1,11 +1,42 @@
 .song {
-    &__group {
-        display: inline-block;
-        vertical-align: middle;
+    padding: $spacing * 2 0;
+    border-bottom: solid 1px $color4;
 
+    &:first-child {
+        padding-top: 0;
+    }
+    
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    &__group {
+        vertical-align: middle;
+        
         box-sizing: border-box;
         height: 100%;
-        width: 49%;
+        width: 100%;
+
+        @include breakpoint($tablet) {
+            display: inline-block;
+
+            width: 49%;
+        }
+
+        & > span {
+            display: block;
+
+            margin-bottom: $spacing;
+
+            font-size: 1rem;
+        }
+
+        &__label {
+            color: $color2;
+
+            font-weight: bold;
+        }
     }
 
     img {
