@@ -26,11 +26,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         lyrics: {
             type: DataTypes.TEXT,
-            allowNull: false,
         },
         tab: {
             type: DataTypes.TEXT,
-            allowNull: false,
         },
     });
     

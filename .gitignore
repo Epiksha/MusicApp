@@ -6,4 +6,5 @@ node_modules
 _Output/
 dist/
 .env
-server/*.sqlite
+*.sqlite
+*.sqlite-journal

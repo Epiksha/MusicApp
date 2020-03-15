@@ -15,7 +15,7 @@
         </div>
 
         <router-link
-            :to="{ path: `songs/${info.id}` }"
+            :to="{ path: `songs/${info.id}`, params: { id: info.id } }"
             type="button"
             class="button"
         >

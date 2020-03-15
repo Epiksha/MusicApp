@@ -8,6 +8,7 @@ const router = express.Router();
 router.post('/register', authPolicy.register, authController.register);
 router.post('/login', authController.login);
 router.get('/songs', songsController.retrieveSongs);
+router.get('/songs/:id', songsController.getSingleSong);
 router.post('/songs', songsController.newSong);
 
 module.exports = router;
