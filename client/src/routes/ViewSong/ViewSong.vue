@@ -1,6 +1,10 @@
 <template>
     <main class="viewSong">
-        <h1>Home</h1>
+        <Song
+            v-if="song"
+            :info="song"
+            :viewing="true"
+        />
     </main>
 </template>
 

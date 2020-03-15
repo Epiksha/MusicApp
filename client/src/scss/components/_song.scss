@@ -42,4 +42,10 @@
     img {
         width: 50%;
     }
+
+    &__video {
+        margin-top: $spacing * 2;
+        padding-top: $spacing * 2;
+        border-top: solid 1px $color4;
+    }
 }

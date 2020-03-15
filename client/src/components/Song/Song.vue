@@ -14,7 +14,14 @@
             >
         </div>
 
+        <YouTube
+            v-if="viewing"
+            class="song__video"
+            :youtube-id="info.youtubeId"
+        />
+
         <router-link
+            v-if="!viewing"
             :to="{ path: `songs/${info.id}`, params: { id: info.id } }"
             type="button"
             class="button"

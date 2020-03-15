@@ -6,7 +6,6 @@ module.exports = {
             const songs = await Song.findAll({
                 limit: 10,
             });
-            console.log('Songs:');
 
             res.send(songs);
         } catch (err) {
@@ -18,7 +17,7 @@ module.exports = {
     
     async getSingleSong(req, res) {
         try {
-            const song = await Song.findOne({ where: { id: req.params.id } });
+            const song = await Song.findByPk(req.params.id);
 
             res.send(song);
         } catch (err) {
