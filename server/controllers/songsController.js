@@ -33,7 +33,7 @@ module.exports = {
 
             res.send(song.toJSON());
         } catch (err) {
-            res.status(400).send({
+            res.status(500).send({
                 error: 'Error occured trying to create the song',
             });
         }
@@ -47,8 +47,25 @@ module.exports = {
 
             res.send(song);
         } catch (err) {
-            res.status(400).send({
+            res.status(500).send({
                 error: 'Error occured trying to update the song',
+            });
+        }
+    },
+    
+    async deleteSong(req, res) {
+        try {
+            console.log(req.body.id);
+            await Song.destroy({
+                where: {
+                    id: req.body.id,
+                },
+            });
+
+            res.send(200);
+        } catch (err) {
+            res.status(500).send({
+                error: 'Error occured trying to delete the song',
             });
         }
     },
