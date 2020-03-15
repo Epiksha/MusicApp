@@ -9,19 +9,6 @@
 
         <nav>
             <ul>
-                <li
-                    v-for="link in links"
-                    :key="link.text"
-                >
-                    <router-link
-                        :to="link.url"
-                        :exact="link.exact"
-                        class="header__link"
-                    >
-                        {{ link.text }}
-                    </router-link>
-                </li>
-
                 <li v-if="!$store.state.isUserLoggedIn">
                     <router-link
                        

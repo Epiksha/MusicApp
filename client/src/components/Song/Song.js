@@ -31,13 +31,22 @@ export default {
     },
 
     methods: {
-        async update() {
+        async updateSong() {
             try {
-                SongService.updateSong(this.newInfo);
+                await SongService.updateSong(this.newInfo);
 
-                this.$router.go(this.$router.currentRoute);
+                this.$router.go();
             } catch (err) {
                 this.error = 'Please fill in all required fields.';
+            }
+        },
+        
+        async deleteSong() {
+            try {
+                await SongService.deleteSong(this.info);
+                this.$router.go(-1);
+            } catch (err) {
+                this.error = 'Could not delete song.';
             }
         },
     },

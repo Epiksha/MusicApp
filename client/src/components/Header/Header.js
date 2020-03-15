@@ -1,18 +1,6 @@
 export default {
     name: 'Header',
 
-    data() {
-        return {
-            links: [
-                {
-                    url: '/songs',
-                    text: 'Browse',
-                    exact: true,
-                },
-            ],
-        };
-    },
-
     methods: {
         logout() {
             this.$store.dispatch('setToken', null);

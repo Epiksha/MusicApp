@@ -127,9 +127,23 @@
 
             <span
                 v-else
-                @click="update"
+                @click="updateSong"
             >
                 Update
+            </span>
+        </button>
+        
+        <button
+            v-if="viewing"
+            class="
+                button
+                button--edit
+                button--delete
+            "
+            @click="deleteSong"
+        >
+            <span>
+                Delete Song
             </span>
         </button>
     </li>

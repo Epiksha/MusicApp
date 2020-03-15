@@ -16,4 +16,8 @@ export default {
     updateSong(songData) {
         return Api().put(`songs/${songData.id}`, songData);
     },
+    
+    deleteSong(songData) {
+        return Api().delete('songs', { data: songData });
+    },
 };
