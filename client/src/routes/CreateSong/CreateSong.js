@@ -16,40 +16,18 @@ export default {
                 lyrics: null,
                 tab: null,
             },
+            error: null,
         };
     },
 
     methods: {
         async create() {
             try {
-                if (this.required) {
-                    await SongService.createSong(this.song);
-                    this.$router.push('songs');
-                }
+                await SongService.createSong(this.song);
+                this.$router.push('songs');
             } catch (err) {
-                console.log(err);
+                this.error = 'Please fill in all required fields.';
             }
-        },
-    },
-
-    computed: {
-        required() {
-            const {
-                title,
-                artist,
-                genre,
-                album,
-                albumImageUrl,
-                youtubeId,
-                lyrics,
-                tab,
-            } = this;
-
-            if (title && artist && genre && album && albumImageUrl && youtubeId && lyrics && tab) {
-                return true;
-            }
-
-            return false;
         },
     },
 

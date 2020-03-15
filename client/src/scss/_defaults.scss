@@ -7,7 +7,11 @@ body {
 main {
     height: 100%;
     margin-bottom: 64px;
-    padding: $spacing * 4;
+    padding: $spacing * 2;
+    
+    @include breakpoint($tablet) {
+        padding: $spacing * 4;
+    }
 }
 
 body, li, ul, h1, h2, h3, h4, h5, p, a, button {

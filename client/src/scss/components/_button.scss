@@ -2,29 +2,20 @@
     display: block;
 
     box-sizing: border-box;
-    margin: auto;
-    padding: $spacing * 0.5 $spacing * 5;
+    width: 50%;
+    margin: $spacing * 2 auto 0 auto;
+    padding: $spacing * 0.5 0;
     border-radius: 1rem;
+
+    text-align: center;
 
     background-color: $color2;
     color: $color0;
 
     font-weight: bold;
-}
 
-.button--menu {
-    height: 36px;
+    @include breakpoint($tablet) {
 
-    fill: $color3;
-
-    cursor: pointer;
-
-    &:hover > svg {
-        fill: $color2;
-    }
-
-    &.active > svg {
-        fill: $color2;
     }
 }
 
@@ -36,12 +27,19 @@
 
     height: 32px;
     width: 32px;
-    padding: $spacing * 0.5;
+    margin-top: 0;
     border: solid 1px $color0;
     border-radius: 50%;
 
     &:hover {
         background: $color0;
         color: $color2;
+    }
+}
+
+.button--form {
+    @include breakpoint($tablet) {
+        margin-top: $spacing * 3;
+        padding: $spacing * 0.75;
     }
 }

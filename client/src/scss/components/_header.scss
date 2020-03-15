@@ -28,7 +28,7 @@
         font-size: 0.8rem;
         font-weight: bold;
 
-        @include breakpoint($tablet) {
+        @include breakpoint($desktop) {
             margin: 0 $spacing;
         }
     }

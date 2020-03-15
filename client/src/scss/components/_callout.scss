@@ -1,20 +1,31 @@
 .callout {
     box-sizing: border-box;
     overflow: hidden;
-    max-width: 60vw;
-    margin: auto;
+    width: 100%;
+    margin-top: $spacing * 2;
     border-radius: 0.5rem;
 
     box-shadow: 0 1px 2px 2px transparentize($color1, 0.9);
 
+    &:first-child {
+        margin-top: 0;
+    }
+
+    @include breakpoint($tablet) {
+        max-width: 60vw;
+        margin: auto;
+        margin-top: $spacing * 3;
+    }
+
     &__header {
+        position: relative;
         padding: $spacing * 0.5 $spacing;
 
         background-color: $color2;
         color: $color0;
     }
 
-    .callout__body {
+    &__body {
         padding: $spacing * 2 $spacing;
     }
 }

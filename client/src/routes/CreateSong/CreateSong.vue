@@ -122,6 +122,12 @@
                 </button>
             </div>
         </form>
+
+        <div
+            v-if="error"
+            class="error"
+            v-text="error"
+        />
     </main>
 </template>
 

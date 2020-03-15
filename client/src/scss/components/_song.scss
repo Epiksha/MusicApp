@@ -1,11 +1,11 @@
 .song {
     &__group {
         display: inline-block;
+        vertical-align: middle;
 
         box-sizing: border-box;
         height: 100%;
         width: 49%;
-        vertical-align: middle;
     }
 
     img {
